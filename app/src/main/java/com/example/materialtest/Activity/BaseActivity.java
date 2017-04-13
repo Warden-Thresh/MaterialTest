@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.Activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -18,17 +18,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.materialtest.Fruit;
+import com.example.materialtest.FruitAdapter;
+import com.example.materialtest.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private SwipeRefreshLayout swipeRefresh;
 
-    private Fruit[] fruits = {new Fruit("Apple",R.drawable.apple),new Fruit("Banana",R.drawable.banana),new Fruit("Orange",R.drawable.orange),
-    new Fruit("watermelon",R.drawable.watermelon),new Fruit("Pear",R.drawable.pear),new Fruit("Grape",R.drawable.grape),new Fruit("pineapple",R.drawable.pineapple),
-    new Fruit("Strawbarry",R.drawable.strawberry),new Fruit("Cherry",R.drawable.cherry),new Fruit("Mango",R.drawable.mango)};
+    private Fruit[] fruits = {new Fruit("Apple", R.drawable.apple),new Fruit("Banana",R.drawable.banana),new Fruit("Orange",R.drawable.orange),
+            new Fruit("watermelon",R.drawable.watermelon),new Fruit("Pear",R.drawable.pear),new Fruit("Grape",R.drawable.grape),new Fruit("pineapple",R.drawable.pineapple),
+            new Fruit("Strawbarry",R.drawable.strawberry),new Fruit("Cherry",R.drawable.cherry),new Fruit("Mango",R.drawable.mango)};
 
     private List<Fruit> fruitlist = new ArrayList<>();
     private FruitAdapter adapter;
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
                             @Override
                             public void onClick(View v) {
-                                Toast.makeText(MainActivity.this, "Data restored",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BaseActivity.this, "Data restored",Toast.LENGTH_SHORT).show();
                             }
                         }).show();
             }

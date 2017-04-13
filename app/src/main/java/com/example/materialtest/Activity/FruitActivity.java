@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.example.materialtest.Activity;
 
 import android.content.Intent;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -12,6 +12,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.materialtest.R;
 
 public class FruitActivity extends AppCompatActivity {
     public static final String FRUIT_NAME = "fruit_name";
